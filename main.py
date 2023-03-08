@@ -3,6 +3,8 @@ from random import randint
 def task1():
     words = []
 
+    print('Коннектим слова через пробел')
+
     while True:
         word = input('Введите слово: ')
         if(word == 'stop'):
@@ -13,6 +15,9 @@ def task1():
     print(" ".join(words))
 
 def task2():
+
+    print('Ищем редкие слова')
+
     while True:
         word = input('Введите слово: ')
         separatedWord = list(word.lower())
@@ -27,6 +32,9 @@ def task2():
                 print("Не очень редкое слово")
 
 def task3():
+
+    print('Математика для самых маленьких')
+
     correctAnswersCounter = 0
     errorsCounter = 0
 
