@@ -1,26 +1,23 @@
 def task1():
-    isBreak = False
     words = []
 
-    while isBreak != True:
+    while True:
         word = input('Введите слово: ')
         if(word == 'stop'):
-            isBreak = True
+            break
         else:
             words.append(word)
     
     print(" ".join(words))
 
 def task2():
-    isBreak = False
-
-    while isBreak != True:
+    while True:
         word = input('Введите слово: ')
         separatedWord = list(word.lower())
         hasFs = 'ф' in separatedWord
 
         if(word == 'stop'):
-            isBreak = True
+            break
         else:
             if hasFs:
                 print("Редкое слово")
