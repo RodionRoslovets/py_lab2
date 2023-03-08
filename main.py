@@ -1,3 +1,5 @@
+from random import randint
+
 def task1():
     words = []
 
@@ -24,5 +26,28 @@ def task2():
             else:
                 print("Не очень редкое слово")
 
+def task3():
+    correctAnswersCounter = 0
+    errorsCounter = 0
+
+    while errorsCounter < 3:
+        a = randint(0, 100)
+        b = randint(0, 100)
+        answer = input(f"{a} + {b} = ")
+
+        if answer.isdigit():
+            if a + b == int(answer):
+                correctAnswersCounter += 1
+                print('Верно!')
+            else:
+                errorsCounter += 1
+                print('Не верно')
+        else:
+            print('Не числовое значение')
+
+    print(f'Игра окончена. Количество верных ответов: {correctAnswersCounter}')
+
+
 task1()
 task2()
+task3()
